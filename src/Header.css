@@ -1,0 +1,224 @@
+h1 {
+    margin-top: 1vh; 
+    padding-bottom: 0;
+    margin-bottom: 0px;
+}
+
+.currency-btn {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+    border: 2px solid transparent;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.currency-btn:hover {
+    background-color: #388E3C;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.currency-btn:active {
+    transform: translateY(2px);
+}
+
+.currency-btn svg {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* תמונה בראש */
+.top-center-image {
+    position: absolute;
+    margin-top: 15vh;
+    top: 5vh;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.top-center-image.active {
+    opacity: 1;
+}
+
+/* עיגולים */
+.circles-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 65vh 0 7vh; /* המרווח עליון ותחתון */
+}
+
+.circle-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* תזוזה עדינה בעת hover */
+}
+
+.circle-wrapper:hover {
+    transform: translateY(-5px); /* תזוזה קלה למעלה */
+}
+
+.circle-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    transition: transform 0.2s ease-in-out; /* תזוזה עדינה גם לתמונה */
+}
+
+.circle-wrapper:hover .circle-image img {
+    transform: scale(1.05); /* הגדלת התמונה עדינה */
+}
+
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle-caption {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+/* כותרות ומידע */
+.info-container {
+    margin-top: 0vh;
+}
+
+/* מעגל התרומה */
+.donation-circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 30px auto;
+}
+
+.circle-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.circle-fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#4CAF50 0%, #e0e0e0 0%);
+    clip-path: circle(50% at 50% 50%);
+    transition: background 0.5s ease-out;
+}
+
+.circle-percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+    .buttons-container {
+        top: 30px;
+    }
+
+    .donation-arrow-container {
+        width: 50px; /* רוחב החץ במסכים קטנים */
+        height: 180px; /* גובה החץ במסכים קטנים */
+    }
+}
+
+.buttons-container {
+    position: absolute;
+    top: 920px;
+    left: 1000px;
+    display: flex;
+    gap: 15px;
+}
+
+
+
+/* עיצוב כללי של המיכל של הכיתובים והגרף */
+.info-container {
+    display: flex;
+    justify-content: space-between; /* רווח בין האלמנטים */
+    align-items: center; /* ממרכז את האלמנטים על הציר האנכי */
+    gap: 20px; /* רווח בין הכיתוב לגרף */
+    margin-top: 0vh;
+}
+
+/* עיצוב הכיתובים */
+.info-text {
+    flex: 1; /* הכיתוב יתפוס מקום של 1 חלק מתוך שניים */
+}
+
+/* עיצוב הכותרות */
+h2 {
+    margin-top: 1vh;
+    padding-bottom: 0;
+    margin-bottom: 0px;
+}
+
+h3 {
+    margin-top: 1vh;
+    padding-bottom: 0;
+    margin-bottom: 0px;
+}
+.info-container {
+    text-align: center; 
+    margin-top: 13vh;
+  }
+  
+  .info-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+  }
+  
+  .info-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
+  
+  .info-number {
+    font-size: 2.5rem; 
+    font-weight: bold;
+    color: #333; 
+  }
+  
+  .info-label {
+    font-size: 1rem; 
+    color: #555; 
+    margin-top: 0.5rem;
+  }
+  

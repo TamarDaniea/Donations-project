@@ -1,0 +1,45 @@
+nav {
+    display: flex;
+    align-items: center;  /* הצבה אופקית של הלינקים */
+    position: absolute;
+    top: 30px;  /* קרוב יותר למעלה */
+    right: 10px;  /* הצבה בצד ימין */
+    z-index: 1;
+}
+
+nav ul {
+    display: flex;  /* הצבה של הלינקים בשורה אחת */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 0 8px;  /* פחות רווח בין הלינקים */
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4CAF50;  /* צבע רגוע של ירוק */
+    font-size: 18px;
+    font-weight: normal;  /* פחות מודגש */
+    display: block;
+    padding: 8px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;  /* מעבר חלק */
+}
+
+/* קו תחתון כאשר מקיימים את העמוד */
+nav ul li a.active {
+    border-bottom: 3px solid #4CAF50;  /* קו תחתון ירוק */
+}
+
+/* שינוי צבע ורקע עדין בעת ריחוף */
+nav ul li a:hover {
+    color: #388E3C;  /* צבע ירוק כהה יותר */
+    border-bottom: 2px solid #388E3C;  /* קו תחתון עדין יותר בריחוף */
+}
+
+nav ul li a.active:hover {
+    color: #4CAF50;  /* צבע ירוק בהיר יותר כשמעבירים עכבר על הלינק הפעיל */
+}

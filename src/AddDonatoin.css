@@ -1,0 +1,100 @@
+/* עיצוב כללי לטופס */
+.addDonion {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+/* כותרת הטופס */
+.addDonion h2 {
+    text-align: center;
+    color: #4c6aaf;
+    margin-bottom: 20px;
+}
+
+/* עיצוב כל שדה בטופס */
+.addDonion label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+/* עיצוב קלטים (input) */
+.addDonion input[type="text"],
+.addDonion input[type="number"],
+.addDonion textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* שינוי גבול שדה הקלט בעת focus */
+.addDonion input[type="text"]:focus,
+.addDonion input[type="number"]:focus,
+.addDonion textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* עיצוב לשגיאות */
+.addDonion div {
+    background-color: #f44336;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* עיצוב עבור textarea */
+.addDonion textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* עיצוב כפתור שלח */
+.addDonion input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* שינוי צבע בעת hover על כפתור שלח */
+.addDonion input[type="submit"]:hover {
+    background-color: #388E3C;
+    transform: translateY(-2px);
+}
+
+/* שינוי צבע בעת active על כפתור שלח */
+.addDonion input[type="submit"]:active {
+    background-color: #2C6B2F;
+    transform: translateY(2px);
+}
+
+/* עיצוב עבור מסכים קטנים */
+@media (max-width: 768px) {
+    .addDonion {
+        padding: 20px;
+    }
+}
